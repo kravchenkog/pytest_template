@@ -11,7 +11,7 @@ class BrowserHelper():
         desired_cap = {
             "browserName": var['browser'],
             "platform": "Linux",
-            "name": "{} report test {}".format(var['test_name'],
+            "name": "{} report test {}".format(var['test_suite'],
                                                datetime.datetime.now()),
             "timeout": 100,
             'resolution': '1920x1080'
@@ -42,7 +42,7 @@ class BrowserHelper():
         driver.implicitly_wait(5)
 
         if var['env'] == 'prod':
-            driver.get(self.app.h_env.base_url)
+            driver.get(self.app.env.base_url)
         return driver
 
     def mark_build(self, status):

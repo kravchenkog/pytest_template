@@ -7,7 +7,7 @@ fixture = None
 def get_global_variables():
     global_variables = {
         "local": 1,  # can be 1 or 0
-        "browser": 'chrome',  # chrome only
+        "browser": 'chrome',  # realized chrome only
         "env": "prod",  # stg or prod
         'test_suite': "",  # will be set automatically
     }
